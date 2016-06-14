@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VoiceDictation.NoteDetailPage"
+		Title="Note Detail">
+	<ContentPage.ToolbarItems>
+      <ToolbarItem Name="Save" Command="{Binding SaveItemCommand}"/>
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout Spacing="10" Padding="10">
+			<Label Text="Title" />
+			<Entry Text="{Binding NoteTitle}" />
+			<Label Text="Body" />
+			<Editor Text="{Binding NoteText}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" HeightRequest="350" />
+			<StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+				<Button Text="{Binding RecordAudioButtonText}" BackgroundColor="#A6E55E" TextColor="White" Command="{Binding RecordAudioCommand}" />
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VoiceDictation.NotesPage"
+		Title="{Binding Title}">
+	<ContentPage.Content>
+		<StackLayout>
+			<ListView ItemsSource="{Binding Notes}" 
+					SelectedItem="{Binding SelectedNote, Mode=TwoWay}" >
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<TextCell Text="{Binding Title}" Detail="{Binding Created,StringFormat='{0:MMMM d, yyyy h:mm}'}" />
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<Button Text="Add New" BackgroundColor="#A6E55E" TextColor="White" Command="{Binding AddNewNoteCommand}" BorderRadius="0" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

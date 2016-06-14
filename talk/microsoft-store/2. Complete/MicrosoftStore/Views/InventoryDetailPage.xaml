@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MicrosoftStore.InventoryDetailPage"
+		xmlns:pages="clr-namespace:Xamarin.Forms.Pages;assembly=Xamarin.Forms.Pages"
+		Title="{Binding Title}">
+	<ContentPage.Content>
+		<StackLayout Padding="10">
+			<StackLayout HorizontalOptions="Center">
+				<StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+					<Image HeightRequest="220" WidthRequest="200" Source="{Binding Inventory.PhotoUrl}" />
+					<Label FontSize="18" TextColor="#030303" Text="{Binding Inventory.Name}" />
+					<Label FontSize="15" TextColor="#8F8E94" Text="{Binding Inventory.Price}" />
+				</StackLayout>
+				<BoxView HeightRequest="2" BackgroundColor="#7cbb00" />
+				<Label FontSize="13" Text="{Binding Inventory.Description}" />
+				<Button Command="{Binding AddToCartCommand}" Text="Add to Cart" BackgroundColor="#00a1f1" TextColor="White" />
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

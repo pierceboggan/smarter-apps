@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MicrosoftStore.InventoryPage"
+		xmlns:local="clr-namespace:MicrosoftStore;assembly:MicrosoftStore"
+		Title="{Binding Title}">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Icon="cart.png" Command="{Binding NavigateToCartCommand}"/>
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout>
+			<ListView ItemsSource="{Binding Inventory}" 
+					HasUnevenRows="true"
+					SeparatorVisibility="None"
+					SelectedItem="{Binding SelectedInventory}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<local:CardViewCell Text="{Binding Name}" Detail="{Binding Price}" ImageSource="{Binding PhotoUrl}"/>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
