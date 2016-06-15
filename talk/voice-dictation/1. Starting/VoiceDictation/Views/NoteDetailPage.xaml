@@ -10,9 +10,6 @@
 			<Entry Text="{Binding NoteTitle}" />
 			<Label Text="Body" />
 			<Editor Text="{Binding NoteText}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" HeightRequest="350" />
-			<StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
-				<Button Text="{Binding RecordAudioButtonText}" BackgroundColor="#A6E55E" TextColor="White" Command="{Binding RecordAudioCommand}" />
-			</StackLayout>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
