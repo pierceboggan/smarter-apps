@@ -53,9 +53,9 @@ namespace EmployeeDirectory
 
 		public CardViewCell()
 		{
-			image = new Image
-			{
-				Aspect = Aspect.AspectFill,
+            image = new Image
+            {
+                Aspect = Device.OnPlatform<Aspect>(Aspect.AspectFill, Aspect.AspectFill, Aspect.AspectFit),
 				HorizontalOptions = LayoutOptions.FillAndExpand,
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				WidthRequest = 220,
@@ -66,10 +66,10 @@ namespace EmployeeDirectory
 			textLabel = new Label
 			{
 				FontSize = Device.OnPlatform<double>(15, 15, 15),
-				TextColor = Device.OnPlatform<Color>(Color.FromHex("030303"), Color.FromHex("030303"), Color.Black),
+				TextColor = Device.OnPlatform<Color>(Color.FromHex("030303"), Color.FromHex("030303"), Color.FromHex("030303")),
 				HorizontalOptions = LayoutOptions.Start,
 				HorizontalTextAlignment = TextAlignment.Start,
-				Margin = Device.OnPlatform<Thickness>(new Thickness(12, 10, 12, 4), new Thickness(20, 0, 20, 5), new Thickness(0)),
+				Margin = Device.OnPlatform<Thickness>(new Thickness(12, 10, 12, 4), new Thickness(20, 0, 20, 5), new Thickness(20, 0, 20, 5)),
 				LineBreakMode = LineBreakMode.WordWrap,
 				VerticalOptions = LayoutOptions.End,
 				Text = "Pierce Boggan"
@@ -78,10 +78,10 @@ namespace EmployeeDirectory
 			detailTextLabel = new Label
 			{
 				FontSize = Device.OnPlatform<double>(13, 13, 13),
-				TextColor = Device.OnPlatform<Color>(Color.FromHex("8F8E94"), Color.FromHex("8F8E94"), Color.Black),
+				TextColor = Device.OnPlatform<Color>(Color.FromHex("8F8E94"), Color.FromHex("8F8E94"), Color.FromHex("8F8E94")),
 				HorizontalOptions = LayoutOptions.Start,
 				HorizontalTextAlignment = TextAlignment.Start,
-				Margin = Device.OnPlatform<Thickness>(new Thickness(12, 0, 10, 12), new Thickness(20, 0, 20, 20), new Thickness(0)),
+				Margin = Device.OnPlatform<Thickness>(new Thickness(12, 0, 10, 12), new Thickness(20, 0, 20, 20), new Thickness(20, 0, 20, 20)),
 				LineBreakMode = LineBreakMode.WordWrap,
 				VerticalOptions = LayoutOptions.End,
 				Text = "pierce@xamarin.com"

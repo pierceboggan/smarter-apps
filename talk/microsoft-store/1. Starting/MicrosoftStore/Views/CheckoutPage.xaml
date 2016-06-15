@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MicrosoftStore.CheckoutPage"
+		xmlns:local="clr-namespace:MicrosoftStore;assembly:MicrosoftStore"
+		Title="{Binding Title}">
+	<ContentPage.Content>
+		<StackLayout>
+			<ListView ItemsSource="{Binding Cart}" 
+					HasUnevenRows="true"
+					SeparatorVisibility="None">
+				<ListView.Header>
+					<StackLayout Padding="10">
+						<Label Text="Items in Cart" FontSize="18" TextColor="#030303" />
+					</StackLayout>
+				</ListView.Header>
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<local:CardViewCell Text="{Binding Name}" Detail="{Binding Price}" ImageSource="{Binding PhotoUrl}"/>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<ListView ItemsSource="{Binding Recommendations}" 
+					HasUnevenRows="true"
+					SeparatorVisibility="None">
+				<ListView.Header>
+					<StackLayout Padding="10">
+						<Label Text="You might also like..." FontSize="18" TextColor="#030303" />
+					</StackLayout>
+				</ListView.Header>
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<TextCell Text="{Binding Name}" Detail="{Binding Description}" />
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
