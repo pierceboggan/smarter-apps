@@ -14,6 +14,8 @@ namespace EmployeeDirectory
 {
 	public class EmployeesViewModel : BaseViewModel
 	{
+		string personGroup;
+
 		public EmployeesViewModel()
 		{
 			Title = "Employees";
