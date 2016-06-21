@@ -36,5 +36,32 @@ namespace EmployeeDirectory
 			get { return employees; }
 			set { employees = value; OnPropertyChanged("Employees"); }
 		}
+
+		Command findSimilarFaceCommand;
+		public Command FindSimilarFaceCommand
+		{
+			get { return findSimilarFaceCommand ?? (findSimilarFaceCommand = new Command(async () => await ExecuteFindSimilarFaceCommandAsync())); }
+		}
+
+		async Task ExecuteFindSimilarFaceCommandAsync()
+		{
+			if (IsBusy)
+				return;
+
+			IsBusy = true;
+
+			try
+			{
+				
+			}
+			catch (Exception ex)
+			{
+				UserDialogs.Instance.ShowError(ex.Message);
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
 	}
 }
