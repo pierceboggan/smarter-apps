@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="ExpenseIt.ExpensesPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ExpenseIt"
+             Title="ExpenseIt">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding AddExpenseCommand}" Text="Add" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView HasUnevenRows="True"
+                  ItemsSource="{Binding Expenses}"
+                  SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:CardViewCell Detail="{Binding Total}"
+                                        ImageSource="{Binding Photo}"
+                                        Text="{Binding TimeStamp}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
