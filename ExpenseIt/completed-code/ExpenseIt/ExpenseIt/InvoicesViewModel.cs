@@ -13,24 +13,24 @@ using Plugin.Media.Abstractions;
 using Microsoft.ProjectOxford.Vision;
 using Microsoft.ProjectOxford.Vision.Contract;
 
-namespace ExpenseIt
+namespace InvoiceIt
 {
-    public class ExpensesViewModel
+    public class InvoicesViewModel
     {
-        public ObservableCollection<Expense> Expenses { get; set; }
+        public ObservableCollection<Invoice> Invoices { get; set; }
 
-        public ExpensesViewModel()
+        public InvoicesViewModel()
         {
-            Expenses = new ObservableCollection<Expense>();
+            Invoices = new ObservableCollection<Invoice>();
         }
 
-        Command addExpenseCommand;
-        public Command AddExpenseCommand
+        Command addInvoiceCommand;
+        public Command AddInvoiceCommand
         {
-            get { return addExpenseCommand ?? (addExpenseCommand = new Command(async () => await ExecuteAddExpenseCommandAsync())); }
+            get { return addInvoiceCommand ?? (addInvoiceCommand = new Command(async () => await ExecuteAddInvoiceCommandAsync())); }
         }
 
-        async Task ExecuteAddExpenseCommandAsync()
+        async Task ExecuteAddInvoiceCommandAsync()
         {
             try
             {
@@ -55,13 +55,11 @@ namespace ExpenseIt
                 OcrResults text;
 
                 var client = new VisionServiceClient("ebccaf8faed7407eb5b2108193d7b13a");
-                using (var photoStream = photo.GetStream())
-                {
-                    text = await client.RecognizeTextAsync(photoStream);
-                }
+                using (var stream = photo.GetStream())
+                    text = await client.RecognizeTextAsync(stream);
 
                 double total = 0.0;
-                foreach(var region in text.Regions)
+                foreach (var region in text.Regions)
                 {
                     foreach (var line in region.Lines)
                     {
@@ -69,16 +67,20 @@ namespace ExpenseIt
                         {
                             if (word.Text.Contains("$"))
                             {
-                                var number = Double.Parse(word.Text.Replace("$", ""));
+                                try
+                                {
+                                    var number = Double.Parse(word.Text.Replace("$", ""));
 
-                                total = (number > total) ? number : total;
+                                    total = (number > total) ? number : total;
+                                }
+                                catch { }
                             }
                         }
                     }
                 }
 
                 // 3. Add to data-bound collection.
-                Expenses.Add(new Expense
+                Invoices.Add(new Invoice
                 {
                     Total = total,
                     Photo = photo.Path,

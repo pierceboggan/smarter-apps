@@ -7,7 +7,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace ExpenseIt
+namespace InvoiceIt
 {
     public partial class App : Application
     {
@@ -15,7 +15,7 @@ namespace ExpenseIt
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ExpenseIt.ExpensesPage())
+            MainPage = new NavigationPage(new InvoiceIt.InvoicesPage())
             {
                 BarBackgroundColor = Color.FromHex("#03A9F4"),
                 BarTextColor = Color.White

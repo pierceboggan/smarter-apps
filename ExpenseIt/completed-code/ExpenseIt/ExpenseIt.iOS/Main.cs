@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace ExpenseIt.iOS
+namespace InvoiceIt.iOS
 {
     public class Application
     {

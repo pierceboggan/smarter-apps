@@ -14,7 +14,7 @@
   <mp:PhoneIdentity PhoneProductId="2482e187-a604-4f14-a967-760e32ab7748" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>ExpenseIt.UWP</DisplayName>
+    <DisplayName>InvoiceIt.UWP</DisplayName>
     <PublisherDisplayName>xamarin</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="ExpenseIt.UWP.App">
+      EntryPoint="InvoiceIt.UWP.App">
       <uap:VisualElements
-        DisplayName="ExpenseIt.UWP"
+        DisplayName="InvoiceIt.UWP"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="ExpenseIt.UWP"
+        Description="InvoiceIt.UWP"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

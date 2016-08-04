@@ -40,14 +40,14 @@
     </Compile>
     <Compile Include="CardViewCell.cs" />
     <Compile Include="Expense.cs" />
-    <Compile Include="ExpensesViewModel.cs" />
-    <Compile Include="ExpensesPage.xaml.cs">
-      <DependentUpon>ExpensesPage.xaml</DependentUpon>
+    <Compile Include="InvoicesViewModel.cs" />
+    <Compile Include="InvoicesPage.xaml.cs">
+      <DependentUpon>InvoicesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ExpensesPage.xaml">
+    <EmbeddedResource Include="InvoicesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

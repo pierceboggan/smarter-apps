@@ -23,9 +23,9 @@
     <key>MinimumOSVersion</key>
     <string>6.0</string>
     <key>CFBundleDisplayName</key>
-    <string>ExpenseIt</string>
+    <string>InvoiceIt</string>
     <key>CFBundleIdentifier</key>
-    <string>com.yourcompany.ExpenseIt</string>
+    <string>com.yourcompany.InvoiceIt</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>CFBundleIconFiles</key>

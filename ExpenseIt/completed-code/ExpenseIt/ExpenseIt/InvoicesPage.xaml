@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="ExpenseIt.ExpensesPage"
+<ContentPage x:Class="InvoiceIt.InvoicesPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ExpenseIt"
-             Title="ExpenseIt">
+             xmlns:local="clr-namespace:InvoiceIt"
+             Title="InvoiceIt">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding AddExpenseCommand}" Text="Add" />
+        <ToolbarItem Command="{Binding AddInvoiceCommand}" Text="Add" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ListView HasUnevenRows="True"
-                  ItemsSource="{Binding Expenses}"
+                  ItemsSource="{Binding Invoices}"
                   SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
