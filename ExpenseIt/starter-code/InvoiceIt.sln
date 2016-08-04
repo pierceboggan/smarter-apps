@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseIt.Droid", "ExpenseIt\ExpenseIt.Droid\ExpenseIt.Droid.csproj", "{C4588DE8-DA54-43BC-8814-374CE67FF7B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceIt.Droid", "ExpenseIt\ExpenseIt.Droid\InvoiceIt.Droid.csproj", "{C4588DE8-DA54-43BC-8814-374CE67FF7B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseIt.iOS", "ExpenseIt\ExpenseIt.iOS\ExpenseIt.iOS.csproj", "{B2F3F763-FECF-4681-A558-417662CE6A9B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceIt.iOS", "ExpenseIt\ExpenseIt.iOS\InvoiceIt.iOS.csproj", "{B2F3F763-FECF-4681-A558-417662CE6A9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseIt.UWP", "ExpenseIt\ExpenseIt.UWP\ExpenseIt.UWP.csproj", "{07F9A8B3-5E21-4801-8FA5-F0928B847292}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceIt.UWP", "ExpenseIt\ExpenseIt.UWP\InvoiceIt.UWP.csproj", "{07F9A8B3-5E21-4801-8FA5-F0928B847292}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseIt", "ExpenseIt\ExpenseIt\ExpenseIt.csproj", "{1825C5AF-CCF4-4348-9049-273B7C29F855}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceIt", "ExpenseIt\ExpenseIt\InvoiceIt.csproj", "{1825C5AF-CCF4-4348-9049-273B7C29F855}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace ExpenseIt.UWP
+namespace InvoiceIt.UWP
 {
     public sealed partial class MainPage
     {
@@ -21,7 +21,7 @@ namespace ExpenseIt.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new ExpenseIt.App());
+            LoadApplication(new InvoiceIt.App());
         }
     }
 }

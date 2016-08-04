@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace ExpenseIt
+namespace InvoiceIt
 {
     public class CardViewCell : ViewCell
     {

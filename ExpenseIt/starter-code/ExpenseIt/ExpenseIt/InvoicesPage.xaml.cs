@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace ExpenseIt
+namespace InvoiceIt
 {
-    public partial class ExpensesPage : ContentPage
+    public partial class InvoicesPage : ContentPage
     {
-        public ExpensesPage()
+        public InvoicesPage()
         {
             InitializeComponent();
 
-            BindingContext = new ExpensesViewModel();
+            BindingContext = new InvoicesViewModel();
         }
     }
 }
