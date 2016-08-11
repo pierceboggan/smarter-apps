@@ -10,7 +10,8 @@
     <ContentPage.Content>
         <ListView HasUnevenRows="True"
                   ItemsSource="{Binding Invoices}"
-                  SeparatorVisibility="None">
+                  SeparatorVisibility="None"
+                  IsRefreshing="{Binding IsBusy, Mode=OneWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <local:CardViewCell Detail="{Binding Total}"
